@@ -97,7 +97,7 @@ export default class extends Component {
                 }
             </style>
 
-            <div class="dap-controls" onclick="${this.toggle}">
+            <div class="dap-controls" onclick="${this.toggle}" d-show="${!!this.props.audioUrl}">
                 <${PlaySVG} d-show="${this.props._state === STATE.PAUSE}" class="dap-controls-button"/>
                 <${PauseSVG} d-show="${this.props._state === STATE.PLAY}" class="dap-controls-button"/>
                 <div style="width: ${this.props._progress}%" class="dap-controls-progress"></div>
@@ -132,18 +132,19 @@ export default class extends Component {
         window.__dozArtworkPlayer.addEventListener('ended', () => {
             this.props._state = STATE.PAUSE;
         });
-        window.__dozArtworkPlayer.addEventListener('suspend', () => {
-            this.props._state = STATE.PAUSE;
-        });
         window.__dozArtworkPlayer.addEventListener('timeupdate', () => {
             if (window.__dozArtworkPlayer)
                 this.props._progress = window.__dozArtworkPlayer.currentTime / window.__dozArtworkPlayer.duration * 100;
         });
+        window.__dozArtworkPlayer._setStatePause = () => {
+            this.props._state = STATE.PAUSE;
+        };
         return window.__dozArtworkPlayer;
     }
 
     destroyGlobalPlayer() {
         if (window.__dozArtworkPlayer) {
+            window.__dozArtworkPlayer._setStatePause();
             window.__dozArtworkPlayer.src = '';
             window.__dozArtworkPlayer = null;
             this.props._state = STATE.PAUSE;
