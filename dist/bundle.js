@@ -1,4 +1,4 @@
-// [DozArtworkPlayer]  Build version: 1.0.0  
+// [DozArtworkPlayer]  Build version: 1.1.0  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -148,7 +148,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n\n            <style> \n                :component {\n                    position: relative;\n                    display: block;\n                    width: ', ';\n                    height: ', ';\n                    background: url("', '") center;\n                    background-size: cover;\n                    border-radius: ', ';\n                }\n\n                .dap-controls {\n                    display: flex;\n                    align-items: center;\n                    text-align: center;\n                    position: absolute;\n                    height: 100%;\n                    width: 100%;\n                    left: 0;\n                    top: 0;\n                    background: rgb(0,0,0);\n                    background: radial-gradient(circle, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0) 70%);\n                    cursor: pointer;\n                }\n\n                .dap-controls svg {\n                    width: 40%;\n                    fill: #fff;\n                    transition: all 250ms;\n                    opacity: .75;\n                }\n\n                .dap-controls:hover svg{\n                    width: 60%;\n                    opacity: 1;\n                }\n            </style>\n\n            <div class="dap-controls" onclick="', '">\n                <', ' forceupdate d-show="', '" class="dap-controls-button"/>\n                <', ' forceupdate d-show="', '" class="dap-controls-button"/>\n            </div>\n        '], ['\n\n            <style> \n                :component {\n                    position: relative;\n                    display: block;\n                    width: ', ';\n                    height: ', ';\n                    background: url("', '") center;\n                    background-size: cover;\n                    border-radius: ', ';\n                }\n\n                .dap-controls {\n                    display: flex;\n                    align-items: center;\n                    text-align: center;\n                    position: absolute;\n                    height: 100%;\n                    width: 100%;\n                    left: 0;\n                    top: 0;\n                    background: rgb(0,0,0);\n                    background: radial-gradient(circle, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0) 70%);\n                    cursor: pointer;\n                }\n\n                .dap-controls svg {\n                    width: 40%;\n                    fill: #fff;\n                    transition: all 250ms;\n                    opacity: .75;\n                }\n\n                .dap-controls:hover svg{\n                    width: 60%;\n                    opacity: 1;\n                }\n            </style>\n\n            <div class="dap-controls" onclick="', '">\n                <', ' forceupdate d-show="', '" class="dap-controls-button"/>\n                <', ' forceupdate d-show="', '" class="dap-controls-button"/>\n            </div>\n        ']);
+var _templateObject = _taggedTemplateLiteral(['\n\n            <style> \n                * {\n                    box-sizing: border-box;\n                }\n                \n                :component {\n                    position: relative;\n                    display: block;\n                    width: ', ';\n                    height: ', ';\n                    background: url("', '") center;\n                    background-size: cover;\n                    border-radius: ', ';\n                    overflow: hidden;\n                }\n\n                .dap-controls {\n                    display: flex;\n                    align-items: center;\n                    text-align: center;\n                    position: absolute;\n                    height: 100%;\n                    width: 100%;\n                    left: 0;\n                    top: 0;\n                    background: rgb(0,0,0);\n                    background: radial-gradient(circle, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0) 70%);\n                    cursor: pointer;\n                }\n\n                .dap-controls svg {\n                    width: 40%;\n                    fill: #fff;\n                    transition: all 250ms;\n                    opacity: .75;\n                }\n\n                .dap-controls:hover svg{\n                    width: 60%;\n                    opacity: 1;\n                }\n                \n                .dap-controls-button {\n                    z-index: 2;\n                }\n                \n                .dap-controls .dap-controls-progress {\n                    width: 0; \n                    height: 100%; \n                    background: #000; \n                    position: absolute; \n                    bottom: 0; \n                    left: 0;\n                    transition: all 500ms;\n                    opacity: .4;\n                    box-shadow: inset -1px 0 0 1px #fff;\n                }\n            </style>\n\n            <div class="dap-controls" onclick="', '">\n                <', ' forceupdate d-show="', '" class="dap-controls-button"/>\n                <', ' forceupdate d-show="', '" class="dap-controls-button"/>\n                <div style="width: ', '%" class="dap-controls-progress"></div>\n            </div>\n        '], ['\n\n            <style> \n                * {\n                    box-sizing: border-box;\n                }\n                \n                :component {\n                    position: relative;\n                    display: block;\n                    width: ', ';\n                    height: ', ';\n                    background: url("', '") center;\n                    background-size: cover;\n                    border-radius: ', ';\n                    overflow: hidden;\n                }\n\n                .dap-controls {\n                    display: flex;\n                    align-items: center;\n                    text-align: center;\n                    position: absolute;\n                    height: 100%;\n                    width: 100%;\n                    left: 0;\n                    top: 0;\n                    background: rgb(0,0,0);\n                    background: radial-gradient(circle, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0) 70%);\n                    cursor: pointer;\n                }\n\n                .dap-controls svg {\n                    width: 40%;\n                    fill: #fff;\n                    transition: all 250ms;\n                    opacity: .75;\n                }\n\n                .dap-controls:hover svg{\n                    width: 60%;\n                    opacity: 1;\n                }\n                \n                .dap-controls-button {\n                    z-index: 2;\n                }\n                \n                .dap-controls .dap-controls-progress {\n                    width: 0; \n                    height: 100%; \n                    background: #000; \n                    position: absolute; \n                    bottom: 0; \n                    left: 0;\n                    transition: all 500ms;\n                    opacity: .4;\n                    box-shadow: inset -1px 0 0 1px #fff;\n                }\n            </style>\n\n            <div class="dap-controls" onclick="', '">\n                <', ' forceupdate d-show="', '" class="dap-controls-button"/>\n                <', ' forceupdate d-show="', '" class="dap-controls-button"/>\n                <div style="width: ', '%" class="dap-controls-progress"></div>\n            </div>\n        ']);
 
 var _doz = __webpack_require__(0);
 
@@ -190,7 +190,16 @@ var _class = function (_Component) {
             height: '100px',
             width: '100px',
             borderRadius: '8px',
-            _state: STATE.PAUSE
+            _state: STATE.PAUSE,
+            _progress: 0
+        };
+
+        _this.propsListener = {
+            _state: function _state(v) {
+                if (v === STATE.PAUSE) {
+                    this.props._progress = 0;
+                }
+            }
         };
         return _this;
     }
@@ -198,7 +207,7 @@ var _class = function (_Component) {
     _createClass(_class, [{
         key: 'template',
         value: function template(h) {
-            return h(_templateObject, this.props.width, this.props.height, this.props.imageUrl, this.props.borderRadius, this.toggle, _playSvg2.default, this.props._state === STATE.PAUSE, _pauseSvg2.default, this.props._state === STATE.PLAY);
+            return h(_templateObject, this.props.width, this.props.height, this.props.imageUrl, this.props.borderRadius, this.toggle, _playSvg2.default, this.props._state === STATE.PAUSE, _pauseSvg2.default, this.props._state === STATE.PLAY, this.props._progress);
         }
     }, {
         key: 'toggle',
@@ -233,6 +242,9 @@ var _class = function (_Component) {
             });
             window.__dozArtworkPlayer.addEventListener('suspend', function () {
                 _this2.props._state = STATE.PAUSE;
+            });
+            window.__dozArtworkPlayer.addEventListener('timeupdate', function () {
+                if (window.__dozArtworkPlayer) _this2.props._progress = window.__dozArtworkPlayer.currentTime / window.__dozArtworkPlayer.duration * 100;
             });
             return window.__dozArtworkPlayer;
         }
