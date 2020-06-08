@@ -8,6 +8,8 @@ function register() {
         createDozWebComponent('doz-artwork-player', cmp, [
             'image-url',
             'audio-url',
+            'height',
+            'width',
             'border-radius'
         ]);
     }
