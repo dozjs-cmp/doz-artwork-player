@@ -79,6 +79,9 @@ export default class extends Component {
                 
                 .dap-controls-button {
                     z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 
                 .dap-controls .dap-controls-progress {
@@ -95,8 +98,8 @@ export default class extends Component {
             </style>
 
             <div class="dap-controls" onclick="${this.toggle}">
-                <${PlaySVG} forceupdate d-show="${this.props._state === STATE.PAUSE}" class="dap-controls-button"/>
-                <${PauseSVG} forceupdate d-show="${this.props._state === STATE.PLAY}" class="dap-controls-button"/>
+                <${PlaySVG} d-show="${this.props._state === STATE.PAUSE}" class="dap-controls-button"/>
+                <${PauseSVG} d-show="${this.props._state === STATE.PLAY}" class="dap-controls-button"/>
                 <div style="width: ${this.props._progress}%" class="dap-controls-progress"></div>
             </div>
         `
