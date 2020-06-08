@@ -1,4 +1,4 @@
-// [DozArtworkPlayer]  Build version: 1.1.2  
+// [DozArtworkPlayer]  Build version: 1.1.3  
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("doz"));
@@ -124,7 +124,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function register() {
     if (typeof window !== 'undefined') {
         (0, _doz.define)('doz-artwork-player', _src2.default);
-        (0, _doz.createDozWebComponent)('doz-artwork-player', _src2.default, ['image-url', 'audio-url']);
+        (0, _doz.createDozWebComponent)('doz-artwork-player', _src2.default, ['image-url', 'audio-url', 'border-radius']);
     }
 }
 
