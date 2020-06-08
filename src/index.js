@@ -36,6 +36,12 @@ export default class extends Component {
         return h`
 
             <style> 
+                :host {
+                    display: block;
+                    width: ${this.props.width};
+                    height: ${this.props.height};
+                }
+                
                 * {
                     box-sizing: border-box;
                 }
