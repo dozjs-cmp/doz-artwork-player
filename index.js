@@ -1,11 +1,11 @@
-import {define, createDozWebComponent} from 'doz'
+import {define, defineWebComponent} from 'doz'
 import cmp from './src'
 
 // expose component to global scope
 function register() {
     if (typeof window !== 'undefined') {
         define('doz-artwork-player', cmp);
-        createDozWebComponent('doz-artwork-player', cmp, [
+        defineWebComponent('doz-artwork-player', cmp, [
             'image-url',
             'audio-url',
             'height',
